@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .video_container video {
+        transition: transform 0.3s ease;
+      }
+
+      .video_container:hover video {
+        transform: scale(1.1);
+      }
+
+      .video_container {
+        perspective: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-screen">
+      <header
+        class="h-screen bg-center bg-cover"
+        style="background-image: url('images/guns and ramen.jpg')"
+      >
+        <nav class="flex items-center justify-between h-24 px-8">
+          <div class="flex items-center gap-2 cursor-pointer">
+            <img src="images/LogoWhite.svg" alt="" />
+            <p class="text-xl text-white">Evano</p>
+          </div>
+          <div>
+            <ul class="flex items-center gap-14">
+              <li
+                class="transition-transform transform duration-400 hover:scale-110"
+              >
+                <a
+                  href="index.html"
+                  class="font-medium tracking-wide text-white"
+                  >Home</a
+                >
+              </li>
+              <li
+                class="transition-transform transform duration-400 hover:scale-110"
+              >
+                <a
+                  href="services.html"
+                  class="font-medium tracking-wide text-white"
+                  >Services</a
+                >
+              </li>
+              <li
+                class="transition-transform transform duration-400 hover:scale-110"
+              >
+                <a
+                  href="projects.html"
+                  class="font-medium tracking-wide text-white"
+                  >Projects</a
+                >
+              </li>
+              <li
+                class="transition-transform transform duration-400 hover:scale-110"
+              >
+                <a
+                  href="contact.html"
+                  class="font-medium tracking-wide text-white"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="p-36">
+        <div class="flex flex-col justify-center gap-24 pb-24">
+          <div class="text-5xl">
+            <p>Crafting the future of digital</p>
+            <p>experiences through emotional</p>
+            <p>design, illustration, animation.</p>
+          </div>
+          <div class="text-lg font-normal text-gray-500">
+            <p>FEATURED WORK SEASON 23/24</p>
+          </div>
+        </div>
+        <hr class="h-px bg-black border-none" />
+        <div class="flex justify-between h-72 bg-aqua">
+          <div class="content-center p-24 text-2xl font-semibold">
+            Avatars For Commercial
+          </div>
+          <div class="content-center video_container">
+            <video
+              autoplay
+              muted
+              class="object-cover rounded-2xl w-80 h-52"
+              src="https://www.w3schools.com/tags/movie.mp4"
+              loop
+            ></video>
+          </div>
+        </div>
+        <hr class="h-px bg-black border-none" />
+        <div class="flex justify-between h-72 bg-aqua">
+          <div class="content-center p-24 text-2xl font-semibold">
+            Character For Film
+          </div>
+          <div class="content-center video_container">
+            <video
+              autoplay
+              muted
+              class="object-cover rounded-2xl w-80 h-52"
+              src="https://www.w3schools.com/tags/movie.mp4"
+              loop
+            ></video>
+          </div>
+        </div>
+        <hr class="h-px bg-black border-none" />
+        <div class="flex justify-between h-72 bg-aqua">
+          <div class="content-center p-24 text-2xl font-semibold">
+            Avatars For Commercial
+          </div>
+          <div class="content-center video_container">
+            <video
+              autoplay
+              muted
+              class="object-cover rounded-2xl w-80 h-52"
+              src="https://www.w3schools.com/tags/movie.mp4"
+              loop
+            ></video>
+          </div>
+        </div>
+        <hr class="h-px bg-black border-none" />
+        <div class="flex justify-between h-72 bg-aqua paka">
+          <div class="content-center p-24 text-2xl font-semibold">
+            Character For Film
+          </div>
+          <div class="content-center video_container">
+            <video
+              autoplay
+              muted
+              class="object-cover rounded-2xl w-80 h-52"
+              src="https://www.w3schools.com/tags/movie.mp4"
+              loop
+            ></video>
+          </div>
+        </div>
+        <hr class="h-px bg-black border-none" />
+        <div class="flex justify-center p-20 project-btn">
+          <button
+            class="p-5 text-3xl transition-transform transform border border-black rounded-full hover:bg-black hover:text-white duration-400"
+          >
+            MORE PROJECTS
+          </button>
+        </div>
+      </main>
+      <footer class="w-full bg-slate-300">
+        <div class="h-[800px] footer-wrapper">
+          <div class="h-56 text-6xl footer-text px-36 pt-36">
+            <p class="pb-6 text-red-600">Let's Create</p>
+            <p class="">New Stories Together</p>
+          </div>
+          <hr class="h-px bg-black border-none w-[1000px]" />
+          <div
+            class="flex items-center justify-between grid-cols-3 text-xl pt-60 footer-bottom px-36"
+          >
+            <div class="email">
+              <button
+                class="p-4 transition-transform transform border border-black rounded-full hover:scale-110 hover:border-red-600 hover:bg-red-600 hover:text-white"
+              >
+                Evano@gmail.com
+              </button>
+            </div>
+            <div class="location">Located in Colombo. Srilanka</div>
+            <div class="flex gap-5 socials">
+              <img
+                src="images/socials/icons8-facebook.svg"
+                alt=""
+                class="transition-transform transform hover:scale-110"
+              />
+              <img
+                src="images/socials/icons8-instagram.svg"
+                alt=""
+                class="transition-transform transform hover:scale-110"
+              />
+              <img
+                src="images/socials/icons8-twitter.svg"
+                alt=""
+                class="transition-transform transform hover:scale-110"
+              />
+              <img
+                src="images/socials/icons8-tiktok.svg"
+                alt=""
+                class="transition-transform transform hover:scale-110"
+              />
+            </div>
+          </div>
+          <div class="flex justify-center pt-56 copyrights">
+            <div class="mb-3 text-xs copyright-text">
+              ALL RIGHTS RESERVED 2024 © EVANO
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.querySelectorAll('.paka').forEach(container => {
+        const video = container.querySelector('video');
+
+        container.addEventListener('mousemove', (e) => {
+          const rect = container.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          video.style.transform = `scale(1.2) translate(${x / 30}px, ${y / 20}px)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+          video.style.transform = 'scale(1.2) translate(0, 0)';
+        });
+      });
+    </script>
+  </body>
+</html>
