@@ -553,3 +553,59 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.3);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.8);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Apply the animation to a class */
+.blob-animation {
+  animation: blob 7s infinite;
+}
+
+.blob-delay-1 {
+  animation-delay: 1s;
+}
+
+.blob-delay-2 {
+  animation-delay: 4s;
+}
+
+
+/*nav bar active link
+.nav_link{
+  position: relative;
+}
+
+.active::before{
+  content: "";
+  height: 2px;
+  background: red;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s linear;
+  animation: animate 0.3s ease-in;
+}
+
+@keyframes animate {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}*/
