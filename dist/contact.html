@@ -7,48 +7,62 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+          .nav-item {
+            position: relative;
+          }
+          .nav-item .dot {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: transparent;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+          }
+    
+          .nav-item.active .dot,
+          .nav-item:hover .dot {
+            background-color: red;
+          }
+          .header-content {
+            position: relative;
+            z-index: 1;
+          }
+          
+        </style>
       </head>
 <body>
     <div class="container max-w-full">
-    <header>
-        <nav class="flex items-center justify-between h-24 px-8">
+      <header class="relative h-24 overflow-hidden">
+        <div class="flex items-center justify-between h-24 px-8 bg-black bg-opacity-25 header-content">
           <div class="flex items-center gap-2 cursor-pointer">
-            <img src="images/LogoDark.svg" alt="" />
-            <p class="text-xl text-black">Evano</p>
+            <img src="images/LogoWhite.svg" alt="" />
+            <p class="text-xl text-white">Evano</p>
           </div>
           <div>
             <ul class="flex items-center gap-14">
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="index.html"
-                  class="font-medium tracking-wide text-black "
-                  >Home</a
-                >
+              <li class="transition-transform transform nav-item active duration-400 hover:scale-110">
+                <a href="index.html" class="relative font-medium tracking-wide text-white">Home</a>
+                <div class="dot"></div>
               </li>
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="projects.html"
-                  class="font-medium tracking-wide text-black hover:scale-110"
-                  >Projects</a
-                >
+              <li class="transition-transform transform nav-item duration-400 hover:scale-110">
+                <a href="projects.html" class="relative font-medium tracking-wide text-white">projects</a>
+                <div class="dot"></div>
               </li>
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="about.html"
-                  class="font-medium tracking-wide text-black hover:scale-110"
-                  >About</a
-                >
+              <li class="transition-transform transform nav-item duration-400 hover:scale-110">
+                <a href="about.html" class="relative font-medium tracking-wide text-white">About</a>
+                <div class="dot"></div>
               </li>
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="contact.html"
-                  class="font-medium tracking-wide text-black"
-                  >Contact</a
-                >
+              <li class="transition-transform transform nav-item duration-400 hover:scale-110">
+                <a href="contact.html" class="relative font-medium tracking-wide text-white">Contacts</a>
+                <div class="dot"></div>
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
       </header>
       <div class="p-32">
         <div class="absolute bg-purple-300 rounded-full top-52 right-[384px] w-60 h-60 mix-blend-multiply filter blur-xl blob-animation blob-delay-1"></div>

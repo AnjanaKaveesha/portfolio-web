@@ -570,7 +570,7 @@ video {
   }
 }
 
-/* Apply the animation to a class */
+/* Apply the animation to contact page */
 .blob-animation {
   animation: blob 7s infinite;
 }
@@ -584,28 +584,4 @@ video {
 }
 
 
-/*nav bar active link
-.nav_link{
-  position: relative;
-}
-
-.active::before{
-  content: "";
-  height: 2px;
-  background: red;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: width 0.3s linear;
-  animation: animate 0.3s ease-in;
-}
-
-@keyframes animate {
-  0%{
-    width: 0%;
-  }
-  100%{
-    width: 100%;
-  }
-}*/
+/*nav bar css*/

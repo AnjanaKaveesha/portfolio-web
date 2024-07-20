@@ -25,52 +25,76 @@
       .video_container {
         perspective: 1000px;
       }
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-item .dot {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: transparent;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-item.active .dot,
+      .nav-item:hover .dot {
+        background-color: red;
+      }
+
+      .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 1;
+      }
     </style>
   </head>
   <body>
     <div class="w-screen">
-      <header
-        class="h-screen bg-center bg-cover"
-        style="background-image: url('images/guns and ramen.jpg')"
-      >
-        <nav class="flex items-center justify-between h-24 px-8">
+      <header class="relative h-screen overflow-hidden">
+        <video autoplay muted loop class="video-background">
+          <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="flex items-center justify-between h-24 px-8 bg-black bg-opacity-25 header-content">
           <div class="flex items-center gap-2 cursor-pointer">
             <img src="images/LogoWhite.svg" alt="" />
             <p class="text-xl text-white">Evano</p>
           </div>
           <div>
             <ul class="flex items-center gap-14">
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="index.html"
-                  class="font-medium tracking-wide text-white "
-                  >Home</a
-                >
+              <li class="transition-transform transform nav-item active duration-400 hover:scale-110">
+                <a href="index.html" class="relative font-medium tracking-wide text-white">Home</a>
+                <div class="dot"></div>
               </li>
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="projects.html"
-                  class="font-medium tracking-wide text-white"
-                  >Projects</a
-                >
+              <li class="transition-transform transform nav-item duration-400 hover:scale-110">
+                <a href="projects.html" class="relative font-medium tracking-wide text-white">projects</a>
+                <div class="dot"></div>
               </li>
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="about.html"
-                  class="font-medium tracking-wide text-white"
-                  >About</a
-                >
+              <li class="transition-transform transform nav-item duration-400 hover:scale-110">
+                <a href="about.html" class="relative font-medium tracking-wide text-white">About</a>
+                <div class="dot"></div>
               </li>
-              <li class="transition-transform transform duration-400 hover:scale-110">
-                <a
-                  href="contact.html"
-                  class="font-medium tracking-wide text-white "
-                  >Contact</a
-                >
+              <li class="transition-transform transform nav-item duration-400 hover:scale-110">
+                <a href="contact.html" class="relative font-medium tracking-wide text-white">Contacts</a>
+                <div class="dot"></div>
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
       </header>
       <main class="p-36">
         <div class="flex flex-col justify-center gap-24 pb-24">
