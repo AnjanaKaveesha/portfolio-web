@@ -1,4 +1,3 @@
-
 // <--------------play video on hover-------------->
 function playVideo(element) {
   const video = element.querySelector(".hoverVideo");
@@ -10,7 +9,6 @@ function pauseVideo(element) {
   video.pause();
   video.currentTime = 0;
 }
-
 
 // <---------------video scaling and move with cursor --------------->
 document.querySelectorAll(".video_div").forEach((container) => {
@@ -31,3 +29,24 @@ document.querySelectorAll(".video_div").forEach((container) => {
 
 // <-----------------nav bar links------------------->
 
+// Get the current page URL
+const currentPage = window.location.pathname.split("/").pop();
+
+// Mapping page names to their respective nav item IDs
+const pageMapping = {
+  "index.html": "home",
+  "projects.html": "projects",
+  "about.html": "about",
+  "contact.html": "contacts",
+};
+
+// Function to set the active nav item
+function setActiveNavItem() {
+  const activePage = pageMapping[currentPage];
+  if (activePage) {
+    document.getElementById(activePage).classList.add("active");
+  }
+}
+
+// Set the active nav item on page load
+window.onload = setActiveNavItem;
